@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bg.png);
+    background-color: #11262b;
+    margin: 50px;
+    color: #c4d1da;
+    font-family: 'Acme', sans-serif;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "profile profile . portfolio portfolio"
+    "name photo . soon soon"
+    "profession photo . soon soon"
+    "info photo . soon soon"
+    "skills skills . other other"
+    "about-skills about-skills . icons icons"
+    "about-skills about-skills . a a"
+}
+
+.profile {
+    grid-area: profile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #5bcec5 solid 5px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 10px #9ecaed;
+    text-shadow: 2px 2px 15px #9ecaed;
+}
+
+.name {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 1.5vw;
+}
+
+.profession {
+    grid-area: profession;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 1.5vw;
+}
+
+.info {
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 1.5vw;
+}
+
+.info td.left {
+    float: left;
+}
+
+.info td.right {
+    float: right;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: photo;
+    border-bottom: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.photo img {
+    border-radius: 100%;
+    width: 50%;
+    border: #5bcec5 ridge 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    padding: 5px;
+}
+
+.skills {
+    grid-area: skills;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    text-shadow: 2px 2px 15px #9ecaed;
+}
+
+.about-skills {
+    grid-area: about-skills;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 1.5vw;
+}
+
+td {
+    padding: 10px;
+}
+
+.portfolio {
+    grid-area: portfolio;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #5bcec5 solid 5px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 0 10px #9ecaed;
+    text-shadow: 2px 2px 15px #9ecaed;
+}
+
+.soon {
+    grid-area: soon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 3vw;
+    text-shadow: 2px 2px 15px #9ecaed;
+}
+
+.other {
+    grid-area: other;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    text-shadow: 2px 2px 15px #9ecaed;
+}
+
+.icons {
+    grid-area: icons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+a > img {
+    width: 50px;
+    display: block;
+    margin: 1vw 4vw;
+}
+
+.about-me {
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-left: #5bcec5 solid 5px;
+    border-right: #5bcec5 solid 5px;
+    border-bottom: #5bcec5 solid 5px;
+    box-shadow: 0 0 10px #9ecaed;
+    font-size: 1vw;
+    padding: 10px;
+}
